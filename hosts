@@ -1,0 +1,14 @@
+[redirectors]
+ceodesk-DOMAIN.com filebeat_id=sh_redir1
+press.domain.com filebeat_id=sh_redir2
+ads.DOMAIN.online filebeat_id=lh_redir1
+[teamservers]
+op1.DOMAIN.com filebeat_id=c2_https1
+[redelk_server]
+redelk.DOMAIN.com  
+[redirectors:vars]
+ansible_python_interpreter=/usr/bin/python3
+[teamservers:vars]
+ansible_python_interpreter=/usr/bin/python3
+[redelk_server:vars]
+ansible_python_interpreter=/usr/bin/python3
