@@ -16,9 +16,9 @@ scenario_name: short_haul_c2
 
 # Redelk Server Host. This can be either an DNS name or IP address. Port 80 will need
 # to be open on this host.
-redelk_server_host: redelk.totesnotredteam.com
+redelk_server_host: redelk.DOMAIN.com
 enable_letsencrypt: true
-le_email: gregory.hetrick@<EMAIL>.com
+le_email: Jim.Hacker@<EMAIL>.com
 
 # Redelk Server Port: The port that RedElk receives data on. Default 5044. Be sure whatever
 # port you set this to is open on the firewall.

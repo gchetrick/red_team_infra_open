@@ -11,8 +11,8 @@ variable "grog-key" {
   default = "redirectors/grog.pub"
 }
 variable "aws-akey" {
-  default = "xxxxxxx"
+  default = "xxxxxx"
 }
 variable "aws-skey" {
-  default = "xxxxxxxxx"
+  default = "xxxxx"
 }

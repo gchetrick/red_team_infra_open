@@ -6,10 +6,10 @@
   - include_role:
       name: redirectors
     vars:
-      le_email: 'gregory.hetrick@zurichservices.com'
+      le_email: 'Jim.Hacker@DOMAIN.com'
       vhosts: [
         {
-          servername: 'newsredir.z-corporate-news.com',
+          servername: 'newsredir.NEWS.com',
           http_port: 80,
           https_port: 443,
         

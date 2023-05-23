@@ -6,5 +6,5 @@ license_key: xxxx-xxxx-xxxx-xxxx
 teamserver_password: cxx-BxOxxGH-gxxxxxx
 
 c2_profile_filename: /root/cobaltstrike/profiles/zrt.profile
-c2_server_url: https://op1.totesnotredteam.com
+c2_server_url: https://op1.DOMAIN.com
 redirect_url: https://www.amazon.com
