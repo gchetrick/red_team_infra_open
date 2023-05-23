@@ -1,0 +1,34 @@
+---
+- name: Install git
+  apt: name=git update_cache=yes state=latest
+# Configure CS installation as Teamserver and start the Teamserver
+- name: Create profile directory in CS directory
+  file:
+    path: "/root/cobaltstrike/profiles"
+    state: directory
+
+- name: Copy profile directory
+  copy:
+    src: "{{ tools_dir }}/"
+    dest: /root/cobaltstrike/profiles
+  when: tools_dir is defined
+
+- name: Start Teamserver inside tmux session with specified profile
+  shell: |
+    tmux has-session -t teamserver_session 2>/dev/null;
+    if [ $? -ne 0 ]; then tmux new-session -d -s teamserver_session 'cd /root/cobaltstrike && sudo ./teamserver {{ ansible_default_ipv4.address }} {{ teamserver_password }} {{ c2_profile_filename }}'
+    fi
+  args:
+    chdir: "/root/cobaltstrike"
+  become: yes
+
+- name: Git clone modrewrite
+  ansible.builtin.git:
+    repo: https://github.com/threatexpress/cs2modrewrite.git
+    dest: /root/cobaltstrike/cs2modrewrite
+
+- name: run cs2modrewrite
+  ansible.builtin.shell:
+    cmd: /usr/bin/python3 /root/cobaltstrike/cs2modrewrite/cs2modrewrite.py -i /root/cobaltstrike/profiles/zrt.profile -c {{ c2_server_url }} -r {{ redirect_url }} -o htaccess_modrewrite
+
+#copy the file over to the redirectors?

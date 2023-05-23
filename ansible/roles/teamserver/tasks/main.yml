@@ -1,0 +1,4 @@
+---
+- include: "update.yml"
+- include: "setup-cobaltstrike.yml"
+- include: "configure-teamserver.yml"

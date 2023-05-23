@@ -1,0 +1,16 @@
+1. Run the terraform scripts to deploy systems.
+2. Update hosts file
+3. Configure firewalls in DO
+  a. Allow Redirectors to talk https to teamservers
+  b. Allow redirectors and teamservers to talk https to redelk
+4. Configure DNS
+  a. Create A record for redirectors in target domain
+  b. Create A record for redelk named redelk.totesnotredteam.com (or update IP)
+5. Run redirector Ansible Playbook
+6. Run teamserver Ansible Playbook
+7. Update vars for RedELK (Install ELK Server - Ansible Broke)
+8. BROKEN - Run redelk Ansible Playbook
+9. Install RedELK redirectors clients
+10. Install RedELK teamserver clients
+11. Test
+12. Profit

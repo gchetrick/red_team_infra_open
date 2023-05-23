@@ -1,0 +1,6 @@
+- hosts: redelk_server
+  gather_facts: True
+  user: root
+  tasks: 
+  - include_role:
+      name: redelk-server

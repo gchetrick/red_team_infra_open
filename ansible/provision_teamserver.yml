@@ -1,0 +1,8 @@
+- hosts: teamservers
+  gather_facts: True
+  user: root
+  tasks: 
+  - include_role:
+      name: teamserver
+    vars:
+      tools_dir: c2/profiles

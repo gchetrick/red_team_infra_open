@@ -1,0 +1,17 @@
+- hosts: redirectors
+  gather_facts: True
+  user: ubuntu
+  become: yes
+  tasks: 
+  - include_role:
+      name: redirectors
+    vars:
+      le_email: 'gregory.hetrick@zurichservices.com'
+      vhosts: [
+        {
+          servername: 'newsredir.z-corporate-news.com',
+          http_port: 80,
+          https_port: 443,
+        
+        },
+      ]
