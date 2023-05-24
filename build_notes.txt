@@ -5,7 +5,7 @@
   b. Allow redirectors and teamservers to talk https to redelk
 4. Configure DNS
   a. Create A record for redirectors in target domain
-  b. Create A record for redelk named redelk.totesnotredteam.com (or update IP)
+  b. Create A record for redelk named redelk.DOMAIN.com (or update IP)
 5. Run redirector Ansible Playbook
 6. Run teamserver Ansible Playbook
 7. Update vars for RedELK (Install ELK Server - Ansible Broke)
